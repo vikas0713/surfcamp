@@ -1,95 +1,35 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import HeroSection from "./_components/HeroSection";
+import InfoBlock from "./_components/InfoBlock";
 
 export default function Home() {
+  const headline = (
+    <>
+    <h1>barrel</h1>
+    <h1>your</h1>
+    <h1>happiness</h1>
+    </>
+  )
+
+  const infoBlockData = {
+    text: "Experience",
+    headline: "Unleash the nature and experience the heaven",
+    copy: "Lorem ipsum is dummy text used in graphic design and publishing to demonstrate a document's visual form or typeface without using content. It's made up of scrambled Latin text that emphasizes the design of a layout over the content. Lorem ipsum has been the industry standard dummy text since the 1500s, when an unknown printer scrambled a galley of type to make a book of type specimens. It's remained essentially unchanged since then, even with the transition to electronic typesetting. Lorem ipsum became popular in the 1960s with the release of Letraset sheets that contained Lorem ipsum passages, and more recently with desktop publishing software like Aldus PageMaker",
+    reversed: false
+  }
+
+  const infoBlockData1 = {
+    text: "Experience",
+    headline: "Unleash the nature and experience the heaven",
+    copy: "Lorem ipsum is dummy text used in graphic design and publishing to demonstrate a document's visual form or typeface without using content. It's made up of scrambled Latin text that emphasizes the design of a layout over the content. Lorem ipsum has been the industry standard dummy text since the 1500s, when an unknown printer scrambled a galley of type to make a book of type specimens. It's remained essentially unchanged since then, even with the transition to electronic typesetting. Lorem ipsum became popular in the 1960s with the release of Letraset sheets that contained Lorem ipsum passages, and more recently with desktop publishing software like Aldus PageMaker",
+    reversed: true
+  }
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <main>
+      <HeroSection headline={headline}/>
+      <InfoBlock data={infoBlockData}/>
+      <InfoBlock data={infoBlockData1}/>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
     </main>
   );
-}
+} 
